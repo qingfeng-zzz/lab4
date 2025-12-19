@@ -24,7 +24,7 @@ bool IDatabase::initPatientModel()
     patientTabModel->setEditStrategy(
         QSqlTableModel::OnManualSubmit);//数据保存方式：手动提交
     patientTabModel->setSort(patientTabModel->fieldIndex("name"), Qt::AscendingOrder); // 按name升序排序
-    if (!(patientTabModel->select()))// 查询数据123
+    if (!(patientTabModel->select()))// 查询数据
         return false;
 
     thePatientSelection = new QItemSelectionModel(patientTabModel);
